@@ -1,12 +1,10 @@
 # high quality random password generator using Yubikey hardware
-# only works in Debian at the moment due to formatting command line commands "| tr -dc 0-9 | xargs"
 # https://forum.yubico.com/viewtopic07a2.html?p-7040 has the formatting commands to convert bytes to numbers
 # you can change the length of the random numbers from 100 to bigger or smaller numbers
 # I modified the number generator to create a high quality password generator with letters and symbols
 # tested strength by copying some passwords to enpass and the program seems to think they are strong passwords
 # this program uses the command line 'gpg-connect-agent "scd random 100"' command to generate random bytes using the yubikey
-# it then formats these bytes into characters from 0-z using the redirect "| tr -dc 0-z | xargs" in Debian
-# I am looking for the Windows equivalent formatting commands
+# it then formats these bytes into characters from 0-z using the redirect "| tr -dc 0-z | xargs" 
 
 import subprocess
 import csv 
