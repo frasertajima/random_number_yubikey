@@ -6,18 +6,16 @@
 # https://forum.yubico.com/viewtopic07a2.html?p-7040 has the formatting commands to convert bytes to numbers
 # my modification as the original had "tr -dc 0-z" while I changed it to "tr -dc 0-9" because I only wanted numbers
 
-# you can change the length of the random numbers from 1000 to bigger or smaller numbers
+# you can specify the largest number generated (the range otherwise may be very large)
 # this generates a list of numbers in the random_numbers_yubikey_windows_generated.csv file
 # use GOOGLE sheets or Libreoffice for handling long numbers (excel truncates them!!)
 
-# you can also modify the output to create a high quality password generator! (see random_password_generator_yubikey.py)
+# you can also modify the output to create a high quality password generator (see random_password_generator_yubikey.py)
 # at the command line gpg-connect-agent "scd random 128" /bye generates random bytes of length 128
 # this program takes that output and formats it into numbers only with '| tr -dc 0-9 | xargs' command
 
 # Windows equivalent commands: call "wsl tr" see https://stackoverflow.com/questions/29291986/what-is-the-tr-command-in-windows
 # requires WSL2 to be installed
-# saves the generated random numbers into a csv file for convenience
-# this variation asks for inputs on the number of random numbers and the biggest random number (unbound the range is pretty extreme)
 
 
 import subprocess
