@@ -10,7 +10,7 @@ Modification from the original "tr -dc 0-z" to "tr -dc 0-9" to generate numbers 
 This program generates a list of numbers in the "random_numbers_yubikey_generated.csv" file. Use GOOGLE sheets or Libreoffice for handling long numbers (excel truncates them).
 
 You can also modify the output to create a high quality password generator! (see random_password_generator_yubikey.py).
-At the command line gpg-connect-agent "scd random 100" /bye generates random bytes of length 100.
+At the command line gpg-connect-agent "scd random 128" /bye generates random bytes of length 128.
 This program takes that output and formats it into numbers only with '| tr -dc 0-9 | xargs' command in Debian.
 
 Make sure your yubikey is linked with your Linux OS when running in a new VM: https://blog.programster.org/yubikey-link-with-gpg.
