@@ -4,7 +4,7 @@
 # you can change the length of the random numbers from 100 to bigger or smaller numbers
 # I modified the number generator to create a high quality password generator with letters and symbols
 # tested strength by copying some passwords to enpass and the program seems to think they are strong passwords
-# this program uses the command line 'gpg-connect-agent "scd random 100"' command to generate random bytes using the yubikey
+# this program uses the command line 'gpg-connect-agent "scd random 128"' command to generate random bytes using the yubikey
 # it then formats these bytes into characters from 0-z using the redirect "| tr -dc 0-z | xargs" in Debian
 # I am looking for the Windows equivalent formatting commands
 
