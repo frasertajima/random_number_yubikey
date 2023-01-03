@@ -10,7 +10,7 @@
 # use GOOGLE sheets or Libreoffice for handling long numbers (excel truncates them!!)
 
 # you can also modify the output to create a high quality password generator! (see random_password_generator_yubikey.py)
-# at the command line gpg-connect-agent "scd random 128" /bye generates random bytes of length 100
+# at the command line gpg-connect-agent "scd random 128" /bye generates random bytes of length 128
 # this program takes that output and formats it into numbers only with '| tr -dc 0-9 | xargs' command in Debian
 
 # still looking for the Windows equivalent commands 
