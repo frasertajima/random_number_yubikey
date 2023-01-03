@@ -11,7 +11,7 @@
 # use GOOGLE sheets or Libreoffice for handling long numbers (excel truncates them!!)
 
 # you can also modify the output to create a high quality password generator! (see random_password_generator_yubikey.py)
-# at the command line gpg-connect-agent "scd random 100" /bye generates random bytes of length 100
+# at the command line gpg-connect-agent "scd random 128" /bye generates random bytes of length 100
 # this program takes that output and formats it into numbers only with '| tr -dc 0-9 | xargs' command
 
 # Windows equivalent commands: call "wsl tr" see https://stackoverflow.com/questions/29291986/what-is-the-tr-command-in-windows
@@ -36,7 +36,7 @@ maxnum = int(maxnum)
 
 # Windows command version differest from Linux version
 while num < total_random_numbers:
-    output = subprocess.check_output('gpg-connect-agent "scd random 100" /bye | wsl tr -dc 0-9 | wsl xargs', shell=True)
+    output = subprocess.check_output('gpg-connect-agent "scd random 128" /bye | wsl tr -dc 0-9 | wsl xargs', shell=True)
     if output == b'\n':
         output = b'0\n'                                 # when scd random is 10 or another low number, blank numbers come up!
     if int(output) <= maxnum:
