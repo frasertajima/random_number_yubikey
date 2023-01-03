@@ -2,7 +2,7 @@
 Generate random numbers using Yubikey "SCD Random" command.
 
 High quality random number generator using Yubikey hardware. Only works in Debian at the moment due to formatting command line commands "| tr -dc 0-9 | xargs".
-If you want letters change '0-9' to '0-z' and dont use int().
+If you want letters change '0-9' to '0-z' and don't use int().
 
 https://forum.yubico.com/viewtopic07a2.html?p-7040 has the formatting commands to convert bytes to numbers.
 Modification from the original "tr -dc 0-z" to "tr -dc 0-9" to generate numbers only.
