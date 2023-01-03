@@ -16,3 +16,4 @@ Make sure your yubikey is linked with your Linux OS when running in a new VM: ht
 Modified the linux version to run in Windows. This requires WSL2 to be installed as the Windows version calls "wsl tr" given the lack of Windows version of "tr" command. File writing is slightly different in Windows and required newline="" in line 49.
 
 The Windows version runs more slowly than the Linux version.
+https://felixquinihildebet.wordpress.com/2023/01/03/generate-random-numbers-and-passwords-using-your-yubikey/
