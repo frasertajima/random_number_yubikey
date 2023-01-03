@@ -18,7 +18,7 @@ print ("Below please find {} random passwords generated. Select one to use and c
 print ("------------------------------------------------------------------------------")
 print (" ")
 while num < total_random_numbers:
-    output = subprocess.check_output('echo "scd random 100" | gpg-connect-agent | tr -dc 0-z | xargs', shell=True)
+    output = subprocess.check_output('echo "scd random 128" | gpg-connect-agent | tr -dc 0-z | xargs', shell=True)
     if output == b'\n':
         output = b'0\n'                                 # when scd random is 10 or another low number, blank numbers come up!
     output = str(output)
