@@ -1,4 +1,4 @@
-# random_number_yubikey
+# random_number_generator_yubikey
 Generate high quality random numbers using Yubikey "SCD Random" command.
 
 https://forum.yubico.com/viewtopic07a2.html?p-7040 has the formatting commands to convert bytes to numbers. Modification from the original "tr -dc 0-z" to "tr -dc 0-9" to generate numbers only.
@@ -12,7 +12,7 @@ This program takes that output and formats it into numbers only with '| tr -dc 0
 
 Make sure your yubikey is linked with your Linux OS when running in a new VM: https://blog.programster.org/yubikey-link-with-gpg.
 
-# random_number_yubikey_windows
+# random_number_generator_yubikey_windows
 Modified the linux version to run in Windows. This requires WSL2 to be installed as the Windows version calls "wsl tr" given the lack of Windows version of "tr" command. File writing is slightly different in Windows and required newline="" in line 49.
 
 The Windows version runs more slowly than the Linux version.
