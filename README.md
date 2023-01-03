@@ -15,6 +15,6 @@ This program takes that output and formats it into numbers only with '| tr -dc 0
 
 Make sure your yubikey is linked with your Linux OS when running in a new VM: https://blog.programster.org/yubikey-link-with-gpg.
 
-To do:
-1. looking for the Windows equivalent formatting commands 
-2. getting yubikey to work with WSL elegantly (there are some hacks but...)
+# random_number_yubikey_windows
+Modified the linux version to run in Windows. This requires WSL2 to be installed as the Windows version calls "wsl tr" given the lack of Windows version of "tr" command. File writing is slightly different in Windows and required newline="" in line 49.
+The Windows version runs more slowly than the Linux version.
