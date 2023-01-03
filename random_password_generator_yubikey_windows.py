@@ -1,9 +1,10 @@
-# high quality random password generator using Yubikey hardware
+# high quality random password generator using Yubikey hardware for Windows
+# requires WSL2 to be installed
 # https://forum.yubico.com/viewtopic07a2.html?p-7040 has the formatting commands to convert bytes to numbers
-# you can change the length of the random numbers from 100 to bigger or smaller numbers
-# I modified the number generator to create a high quality password generator with letters and symbols
+
+# modified the number generator to create a high quality password generator with letters and symbols
 # tested strength by copying some passwords to enpass and the program seems to think they are strong passwords
-# this program uses the command line 'gpg-connect-agent "scd random 128"' command to generate random bytes using the yubikey
+# this program uses the command line 'gpg-connect-agent "scd random 128"' command to generate random bytes using the Yubikey
 # it then formats these bytes into characters from 0-z using the redirect "| tr -dc 0-z | xargs" 
 
 import subprocess
