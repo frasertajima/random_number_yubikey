@@ -17,3 +17,6 @@ Modified the linux version to run in Windows. This requires WSL2 to be installed
 
 The Windows version runs more slowly than the Linux version.
 https://felixquinihildebet.wordpress.com/2023/01/03/generate-random-numbers-and-passwords-using-your-yubikey/
+
+# refactored into Fortran!
+See https://felixquinihildebet.wordpress.com/2024/06/28/random-number-and-password-generator-using-yubikey-in-fortran/ for a discussion.
